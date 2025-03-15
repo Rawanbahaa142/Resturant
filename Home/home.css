@@ -1,0 +1,426 @@
+:root {
+    --black: #121212;
+    --white: #d9d9d9;
+    --yellow: #c7ae38;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: var(--white);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+   background: var(--yellow);
+    border-radius: 10px; }
+
+a {
+    text-decoration: none !important;
+    color: var(--white) !important;
+}
+
+body {
+    background-color: var(--black) !important;
+    font-family: 'Playfair Display' !important;
+    color: var(--white) !important;
+
+}
+
+/* start landing */
+.landing {
+    /* margin: 50px 0; */
+    overflow: hidden;
+}
+
+.content-1 {
+    text-align: center;
+    align-items: center;
+}
+
+.content-1 h1 {
+    font-size: 5em;
+}
+
+.btn {
+    margin-top: 40px;
+    transition: .3s;
+}
+
+.btn:hover {
+    border-color: var(--yellow) !important;
+
+}
+
+
+.content-1 .image {
+    position: relative;
+
+
+}
+
+.content-1 .image img:nth-of-type(1) {
+    animation: rotatePan 2s ease-in-out forwards;
+    rotate: 350deg;
+    transition: .3s;
+    /* width: 100%; */
+}
+
+.content-1 .image img:nth-of-type(2) {
+    position: absolute;
+    max-width: 100%;
+    height: 100%;
+    top: 81px;
+    left: 38px;
+    object-fit: cover;
+
+    z-index: -1;
+    rotate: 170deg;
+    transition: .3s;
+    animation: moveSmoke 2s ease-in-out forwards;
+}
+
+
+@media (max-width:980px) {
+    .content-1 {
+        text-align: center;
+    }
+
+    .content-1 h1 {
+        font-size: 4em;
+    }
+
+    .content-1 img {
+        display: none !important;
+    }
+
+}
+
+
+@keyframes rotatePan {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+
+
+@keyframes moveSmoke {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-10px);
+        opacity: 0.5;
+        overflow: hidden;
+    }
+
+}
+
+/* landing */
+
+/* outdoor */
+.space {
+    background-image: url(restaurants-terrace-with-black-green-awnings.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    z-index: -2;
+
+}
+
+
+.clouds {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.cloud {
+    position: absolute;
+    width: 650px;
+
+
+}
+
+
+
+
+.cloud1 {
+    top: 80px;
+    left: 50%;
+
+
+}
+
+.cloud4 {
+    top: -88px;
+    left: 48%;
+
+
+}
+
+.cloud2 {
+    top: -66px;
+    left: 7%;
+
+
+
+}
+
+
+.cloud3 {
+    top: 130px;
+    left: 30%;
+
+}
+
+.cloud5 {
+
+    bottom: -86px;
+
+}
+
+.animate {
+
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.cloud1.animate,
+.cloud4.animate {
+
+    animation-name: moveCloud-right;
+}
+
+
+.cloud2.animate,
+.cloud3.animate,
+.cloud5.animate {
+
+    animation-name: moveCloud-left;
+}
+
+@keyframes moveCloud-left {
+    0% {
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+
+    100% {
+        left: -600px;
+    }
+
+
+}
+
+
+@keyframes moveCloud-right {
+    0% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        left: 100%;
+    }
+
+
+}
+
+/* outdoor */
+
+/* story */
+.story {
+    margin: 100px 0;
+
+}
+
+.story .story_content {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.story .story_image {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.story .story_image img:hover {
+    transform: scale(1.1);
+}
+
+.story .story_image img {
+    width: 100%;
+    transition: .3s;
+}
+
+.story .story_text h3 {
+    font-family: 'Playfair Display' !important;
+    margin: 0;
+}
+
+.story .story_text p {
+    line-height: 1.7;
+    word-spacing: 3px;
+    margin: 15px 0 50px;
+    font-size: 18px;
+
+}
+
+.story .story_text {
+    padding: 0 45px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.story button {
+    background: var(--black);
+    font-size: 20px;
+    font-weight: 500;
+
+    padding-bottom: 8px;
+
+}
+
+@media (max-width:768px) {
+    .story .story_content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story .story_text {
+        margin-bottom: 45px;
+    }
+
+    .story .story_text p {
+        line-height: 1.6;
+        word-spacing: 2px;
+
+        font-size: 16px;
+
+    }
+}
+
+.animated-border {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.animated-border::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: gold;
+    transition: width 0.5s ease-in-out;
+}
+
+.animated-border:hover::after {
+    width: 0;
+}
+
+.animated-border:hover .in_button {
+    color: var(--yellow) !important;
+}
+
+
+
+/* about us */
+
+.aboutUs {
+    margin: 50px 0;
+
+}
+
+.aboutUs .details {
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    padding: 20px 0;
+    transition: .3s;
+}
+
+.aboutUs i {
+    font-size: 35px;
+    padding: 10px;
+}
+
+.aboutUs .col {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.aboutUs .col p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--yellow);
+    font-size: 15px;
+
+}
+
+.aboutUs .col p,
+.aboutUs .col h3 {
+    margin: 0;
+}
+
+.aboutUs .details:hover {
+    text-shadow: 0 0 25px var(--yellow);
+    border-color: var(--yellow);
+    box-shadow: inset 0 0 25px 4px var(--yellow);
+}
+
+
+@media (max-width:768px) {
+    .aboutUs .details {
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+    }
+
+    .aboutUs .col {
+        margin-bottom: 10px;
+    }
+
+    .location i,
+    .reservation i {
+        right: 36px;
+        position: relative;
+
+    }
+}
