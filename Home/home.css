@@ -1,0 +1,84 @@
+
+.navbar {
+    background-color: #111; 
+    padding: 15px 20px;
+}
+
+.navbar-brand {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #c7a17a !important; 
+}
+
+.nav-item{
+    margin-left: 15px;
+    font-size: 18px;
+    color:#c7a17a !important;
+}
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 18px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #c7a17a !important; 
+}
+
+
+.footer {
+    background-color: #111;
+    /* background-image: url('../footerBackGround.jpg'); */
+    background-size: cover;
+   
+    color: white;
+    padding: 50px 0;
+    text-align: left;
+    margin-top: 20px;
+
+}
+
+.footer .branch h5 {
+    font-weight: bold;
+    color:#c7a17a;
+
+}
+
+.footer .branch p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer .branch a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 5px;
+}
+
+.footer .branch a:hover {
+    color: #c7a17a;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+    padding-top: 20px;
+    
+   
+}
+
+.social-icons a {
+    color: white; 
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    color:#c7a17a;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); 
+    color: #c49b63; 
+}
