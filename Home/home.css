@@ -481,6 +481,10 @@ i {
     color: var(--white);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 .Bg .card h3 {
@@ -517,6 +521,10 @@ i {
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
     text-align: center;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 .menu-title {
@@ -556,6 +564,10 @@ i {
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--yellow);
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 .menu-image img {
@@ -563,10 +575,18 @@ i {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
 }
 
 .menu-image img:hover {
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 .menu-text {
@@ -600,6 +620,10 @@ i {
     text-decoration: none;
     transition: 0.3s;
     border-radius: 6px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
 .buttons a:hover {
