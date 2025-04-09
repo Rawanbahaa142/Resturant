@@ -129,12 +129,10 @@ html {
     -o-border-radius: 15px;
 }
 
-
 .contact form .form-group {
-    margin-bottom: 20px;
-    position: relative;
+  margin-bottom: 20px;
+  position: relative;
 }
-
 
 .contact form input,
 .contact form textarea {
@@ -161,11 +159,9 @@ html {
     background-color: #1a1a1a;
 }
 
-
-
 .contact form textarea {
-    height: 150px;
-    resize: none;
+  height: 150px;
+  resize: none;
 }
 
 .contact form #save {
@@ -206,7 +202,6 @@ html {
     border-color: var(--yellow);
     font-size: 16px;
 }
-
 
 @media screen and (max-width: 600px) {
     .contact .social {
