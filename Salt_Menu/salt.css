@@ -1,25 +1,11 @@
-/*start main section*/
-
 :root {
     --black: #121212;
     --white: #d9d9d9;
     --yellow: #c7ae38;
-}
-
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-
-::-webkit-scrollbar-track {
-    background-color: var(--white);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--yellow);
-    border-radius: 10px;
+    --light-gray: #2a2a2a;
+    --dark-gray: #1c1c1c;
+    --font-family: 'Playfair Display', serif;
+    --font-family-alt: 'Arial', sans-serif;
 }
 
 body,
@@ -28,26 +14,25 @@ html {
     padding: 0;
     overflow-x: hidden;
     background-color: var(--black);
+    font-family: var(--font-family-alt);
 }
 
 .salt {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-family);
     font-style: italic;
     text-align: center;
     background: var(--black);
     min-height: 100vh;
     padding: 50px 20px;
+    color: var(--white);
 }
 
 .salt h2 {
-
-    font-family: 'Playfair Display' !important;
+    font-family: var(--font-family);
     color: var(--yellow);
-}
-
-.slat h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 .salt h2 i {
@@ -60,17 +45,17 @@ html {
     padding: 12px 20px;
     width: 90%;
     max-width: 700px;
-    background-color: #1c1c1c;
+    background-color: var(--dark-gray);
     color: var(--white);
     border: 1px solid var(--yellow);
     border-radius: 25px;
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
@@ -79,8 +64,7 @@ html {
 
 .salt input:focus {
     border-color: var(--yellow);
-    /* box-shadow: 0 0 8px var(--yellow);
-    background-color: #2a2a2a; */
+    background-color: #333;
 }
 
 .salt .recipes {
@@ -88,74 +72,115 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
+    gap: 15px;
 }
 
 .salt .recipe {
-    background-color: #1c1c1c;
+    background-color: var(--dark-gray);
     color: var(--white);
     border: 1px solid var(--black);
-    border-radius: 10px;
-    margin: 15px;
+    border-radius: 15px;
     padding: 15px;
-    width: 200px;
-    height: 250px;
-    display: flex;
+    width: 220px;
+    height: 320px;
+    /*Adjustedtofitpricebetter*/display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 .salt .recipe:hover {
-    transform: scale(1.1);
-    box-shadow: 0 3px 3px 3px rgba(255, 221, 0, 0.438);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 221, 0, 0.5);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }
 
 .salt img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.salt .recipe h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--yellow);
 }
 
 .salt .recipe p {
-    margin-top: 10px;
+    margin-top: -11px;
+    font-size: 18px;
+    color: var(--white);
+}
+
+.salt .recipe p strong {
+    color: var(--yellow);
+}
+
+/* Price inside the card */
+.salt .price {
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 1rem;
+    color: var(--yellow);
+    margin-top: auto; /* Ensure the price stays at the bottom */
+    text-align: center;
+    margin-top: 15px;
 }
 
 .salt .back-home {
     display: inline-block;
-    margin: 10px 20px;
-    font-size: 30px;
+    margin: 20px 0;
+    font-size: 22px;
     font-weight: bold;
     text-decoration: none;
     color: var(--yellow);
     cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: 12px 18px;
+    border-radius: 12px;
     transition: all 0.3s ease;
     transform: scale(1);
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
 }
 
 .salt .back-home:hover {
-    font-size: 32px;
+    font-size: 24px;
     transform: scale(1.1);
-
+    background-color: var(--yellow);
+    color: var(--black);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
+
+
