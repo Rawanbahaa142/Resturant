@@ -594,18 +594,16 @@ i {
     font-weight: bold;
 }
 
-@media (max-width:900px) {
-    .grid {
+@media (max-width: 990px) {
+    .grid { 
         display: block;
-    }
+      }    
 }
-
 @media (max-width:350px) {
-    .grid {
+    .grid { 
         display: grid;
-    }
+      }    
 }
-
 .menu-container {
     margin: 2%;
     background-color: #1c1c1c;
