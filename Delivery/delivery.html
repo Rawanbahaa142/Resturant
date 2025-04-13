@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,138 @@
     <link rel="stylesheet" href="delivery.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    
-        
-   
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
 
 </head>
+
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Restaurant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Home/home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Salt_Menu/salt.html">Salt</a></li>
+                            <li><a class="dropdown-item" href="../Drinks_Menu/drinks.html">Drinks</a></li>
+                            <li><a class="dropdown-item" href="../Dessert_Menu/dessert.html">Dessert</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../Delivery/delivery.html">Reservation</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
     <div class="Reservation">
         <div class="Reservation_container">
-           <h1 class="Reservation_text1">Reservation</h1>
-           <h1 class="Reservation_text2">Book your Table</h1> <br>
-           <form class="Reservation_form" >
+            <h1 class="Reservation_text1">Reservation</h1>
+            <h1 class="Reservation_text2">Book your Table</h1> <br>
+            <form class="Reservation_form">
 
-               <!-- Name -->
-               <input type="text" placeholder="Name" class="Reservation_Name" required>
-               
-               <div class="Reservation_Person_Timing">
-               <!-- Person -->
-               <input type="number" placeholder="Num of Person" class="Reservation_Person" required>
-               <!-- Timing -->
-               <input type="text" placeholder="Timing" class="Reservation_Timing" required onfocus="(this.type='time')" onblur="if(this.value===''){ this.type='text' }" >
+                <!-- Name -->
+                <input type="text" placeholder="Name" class="Reservation_Name" required>
+
+                <div class="Reservation_Person_Timing">
+                    <!-- Person -->
+                    <input type="number" placeholder="Num of Person" class="Reservation_Person" required>
+                    <!-- Timing -->
+                    <input type="text" placeholder="Timing" class="Reservation_Timing" required
+                        onfocus="(this.type='time')" onblur="if(this.value===''){ this.type='text' }">
 
                 </div>
 
-               <!-- Date -->
-               <input type="text" placeholder="Date" class="Reservation_Date" required onfocus="(this.type='date')" onblur="if(this.value===''){ this.type='text' }" ><br>
-               
-               <input type="submit" value="Book a Table" class="Reservation_submit">
+                <!-- Date -->
+                <input type="text" placeholder="Date" class="Reservation_Date" required onfocus="(this.type='date')"
+                    onblur="if(this.value===''){ this.type='text' }"><br>
 
-           </form>
-           <script src="delivery.js"></script>
-       </div> 
-   </div>
+                <input type="submit" value="Book a Table" class="Reservation_submit">
+
+            </form>
+            <script src="delivery.js"></script>
+        </div>
+    </div>
+    <!-- Start Footer -->
+    <footer class="new-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 footer-column">
+                    <h5>CONTACT US</h5>
+                    <div class="footer-content">
+                        <p>📍 732/21 El Gomhouria Street,<br>23th of January Street, Qena</p>
+                        <p>📞 1.800.456.6756</p>
+                        <p>📞 1.800.456.6757</p>
+                        <p>✉️ info@restaurant.com</p>
+                        <p>✉️ booking@restaurant.com</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 footer-column">
+                    <h5>OUR LINKS</h5>
+                    <div class="footer-links">
+                        <a href="#">About Us</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Team</a>
+                        <a href="#">Testimonials</a>
+                        <a href="../Delivery/delivery.html">Delivery</a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 footer-column">
+                    <h5>OUR SERVICES</h5>
+                    <div class="footer-links">
+                        <a href="#">Table Service</a>
+                        <a href="#">Quick Delivery</a>
+                        <a href="#">Fresh Healthy Food</a>
+                        <a href="#">Special Menus</a>
+                        <a href="#">Private Events</a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 footer-column">
+                    <h5>HELP CENTER</h5>
+                    <div class="footer-links">
+                        <a href="#">Service</a>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Careers</a>
+                        <a href="../ContactUs/contactus.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2025 Restaurant. All rights reserved.</p>
+
+            </div>
+        </div>
+    </footer>
+    <!-- End New Footer -->
 </body>
+
 </html>

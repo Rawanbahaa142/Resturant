@@ -3,6 +3,7 @@ let all = [];
 async function getDesserts() {
   const res = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
   const data = await res.json();
+  console.log(data.meals);
   all = data.meals;
   show(all);
 }
