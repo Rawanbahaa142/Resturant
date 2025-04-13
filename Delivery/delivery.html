@@ -17,7 +17,7 @@
     <div class="Reservation">
         <div class="Reservation_container">
            <h1 class="Reservation_text1">Reservation</h1>
-           <h1 class="Reservation_text2">Book your Table</h1>
+           <h1 class="Reservation_text2">Book your Table</h1> <br>
            <form class="Reservation_form" >
 
                <!-- Name -->
@@ -25,14 +25,15 @@
                
                <div class="Reservation_Person_Timing">
                <!-- Person -->
-               <input type="text" placeholder="Num of Person" class="Reservation_Person" required>
+               <input type="number" placeholder="Num of Person" class="Reservation_Person" required>
                <!-- Timing -->
-               <input type="text" placeholder="Timing" class="Reservation_Timing" required>
+               <input type="text" placeholder="Timing" class="Reservation_Timing" required onfocus="(this.type='time')" onblur="if(this.value===''){ this.type='text' }" >
+
                 </div>
 
                <!-- Date -->
-               <input type="text" placeholder="Date" class="Reservation_Date" required><br>
-
+               <input type="text" placeholder="Date" class="Reservation_Date" required onfocus="(this.type='date')" onblur="if(this.value===''){ this.type='text' }" ><br>
+               
                <input type="submit" value="Book a Table" class="Reservation_submit">
 
            </form>
