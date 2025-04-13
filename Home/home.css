@@ -567,10 +567,10 @@ i {
     color: var(--white);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-    -webkit-border-radius:;
+    /* -webkit-border-radius:;
     -moz-border-radius:;
     -ms-border-radius:;
-    -o-border-radius:;
+    -o-border-radius:; */
 }
 
 .Bg .card h3 {
@@ -589,28 +589,26 @@ i {
     font-weight: bold;
 }
 
-@media (max-width:900px) {
-    .grid {
+@media (max-width: 990px) {
+    .grid { 
         display: block;
-    }
+      }    
 }
-
 @media (max-width:350px) {
-    .grid {
+    .grid { 
         display: grid;
-    }
+      }    
 }
-
 .menu-container {
     margin: 2%;
     background-color: #1c1c1c;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
     text-align: center;
-    -webkit-border-radius:;
+    /* -webkit-border-radius:;
     -moz-border-radius:;
     -ms-border-radius:;
-    -o-border-radius:;
+    -o-border-radius:; */
 }
 
 .menu-title {
@@ -650,10 +648,10 @@ i {
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--yellow);
-    -webkit-border-radius:;
+    /* -webkit-border-radius:;
     -moz-border-radius:;
     -ms-border-radius:;
-    -o-border-radius:;
+    -o-border-radius:; */
 }
 
 .menu-image img {
