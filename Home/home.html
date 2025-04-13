@@ -21,30 +21,41 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="../restaurant-logo.jpg" alt="Restaurant Logo" width="40" height="40"
-                    class="d-inline-block align-top me-2">
-                Restaurant
-            </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="#">Restaurant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Menu</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Menu
+                        </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Salt_Menu/salt.html">Salt</a></li>
                             <li><a class="dropdown-item" href="../Drinks_Menu/drinks.html">Drinks</a></li>
                             <li><a class="dropdown-item" href="../Dessert_Menu/dessert.html">Dessert</a></li>
-                            <li><a class="dropdown-item" href="../Salt_Menu/salt.html">Salt</a></li>
                         </ul>
                     </li>
+<<<<<<< HEAD
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../Delivery/delivery.html">Reservation</a>
+                </li>
+=======
 
                     <li class="nav-item"><a class="nav-link" href="../Delivery/delivery.html">Reservation</a></li>
                     <li class="nav-item"><a class="nav-link" href="../ContactUs/contactus.html">Contact US</a></li>
 
+>>>>>>> 1a710f2fc86a4e19c4e472410461b7b34a2c0e84
                 </ul>
+            
             </div>
         </div>
     </nav>

@@ -4,17 +4,15 @@ async function getDrinks() {
   const res = await fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail');
   const data = await res.json();
   
-  // Add random price and description to each drink
   all = data.drinks.map(item => ({
     ...item,
-    price: (Math.random() * (30 - 5) + 5).toFixed(2),  // Random price between $5 and $30
-    description: generateRandomDescription()  // Generate random description
+    price: (Math.random() * (30 - 5) + 5).toFixed(2),  
+    description: generateRandomDescription()  
   }));
 
   show(all);
 }
 
-// Function to generate random descriptions
 function generateRandomDescription() {
   const descriptions = [
     "A refreshing drink to brighten your day.",

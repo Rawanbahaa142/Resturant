@@ -5,17 +5,15 @@ async function getsalt() {
     const data = await res.json();
     console.log(data.recipes);
 
-    // Add random price and description
     all = data.recipes.map(item => ({
         ...item,
-        price: (Math.random() * (30 - 5) + 5).toFixed(2),  // Random price between $5 and $30
-        description: generateRandomDescription()  // Generate random description
+        price: (Math.random() * (30 - 5) + 5).toFixed(2),  
+        description: generateRandomDescription()  
     }));
 
     show(all);
 }
 
-// Function to generate random descriptions
 function generateRandomDescription() {
     const descriptions = [
         "A simple yet flavorful recipe for quick meals."
