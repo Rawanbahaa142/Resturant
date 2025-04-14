@@ -1,46 +1,4 @@
-// let all = [];
 
-// async function getdessert() {
-//     const res = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
-//     const data = await res.json();
-//     console.log(data.recipes);
-
-//     all = data.recipes.map(item => ({
-//         ...item,
-//         price: (Math.random() * (30 - 5) + 5).toFixed(2),  
-//         description: generateRandomDescription()  
-//     }));
-
-//     show(all);
-// }
-
-// function generateRandomDescription() {
-//     const descriptions = [
-//         "A simple yet flavorful recipe for quick meals."
-//     ];
-//     return descriptions[Math.floor(Math.random() * descriptions.length)];
-// }
-
-// function show(list) {
-//     const box = document.getElementById("recipes");
-//     box.innerHTML = list.map(item => `
-//     <div class="recipe">
-//         <img src="${item.image}">
-//         <h3>${item.name}</h3>
-//         <p>${item.description}</p>
-//         <p><strong>Price:</strong> $${item.price}</p>
-//     </div>
-//   `).join('');
-// }
-
-// document.getElementById("search").oninput = function (e) {
-//     const word = e.target.value.toLowerCase();
-//     const filtered = all.filter(item => item.name.toLowerCase().includes(word));
-
-//     show(filtered);
-// };
-
-// getdessert();
 
 
 let all = [];
