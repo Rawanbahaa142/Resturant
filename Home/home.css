@@ -562,7 +562,9 @@ i {
     margin: 5px;
     padding: 2px;
 }
-
+.bg {
+    margin: 90px 0;
+}
 .Bg .card {
     background: #080808be;
     padding: 20px;
@@ -771,6 +773,7 @@ i {
 .footer-content p i {
     margin-right: 8px;
     color: var(--yellow);
+        font-size: 15px;
 }
 
 .footer-links {
