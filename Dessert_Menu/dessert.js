@@ -1,19 +1,40 @@
+
+
+
 let all = [];
 
 async function getDesserts() {
   const res = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
   const data = await res.json();
-  console.log(data.meals);
   all = data.meals;
   show(all);
+
+    all = data.meals.map(item => ({
+        ...item,
+        price: (Math.random() * (30 - 5) + 5).toFixed(2),  
+        description: generateRandomDescription()  
+    }));
+  }
+
+    show(all);
+
+
+function generateRandomDescription() {
+    const descriptions = [
+        "A simple yet flavorful recipe for quick meals."
+    ];
+    return descriptions[Math.floor(Math.random() * descriptions.length)];
 }
+
 
 function show(list) {
   const box = document.getElementById("recipes");
-  box.innerHTML = list.slice(0,15).map(item => `
+  box.innerHTML = list .map(item => `
     <div class="recipe">
       <img src="${item.strMealThumb}">
-      <p>${item.strMeal}</p>
+      <p>${item.strMeal}</p>\
+            <p>${item.description}</p>
+    <p><strong>Price:</strong> $${item.price}</p>
     </div>
   `).join('');
 }
@@ -21,7 +42,6 @@ function show(list) {
 document.getElementById("search").oninput = function(e) {
   const word = e.target.value.toLowerCase();
   const filtered = all.filter(item => item.strMeal.toLowerCase().includes(word));
-
   show(filtered);
 };
 
