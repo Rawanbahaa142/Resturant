@@ -1,4 +1,3 @@
-
 // resize landing
 window.addEventListener("resize", function () {
     let element = document.querySelector(".image");
@@ -37,7 +36,6 @@ window.addEventListener("scroll", function () {
         navbar.classList.remove("scrolled");
     }
 });
-
 
 // Back to Top Button
 const backToTopBtn = document.getElementById("backToTop");
