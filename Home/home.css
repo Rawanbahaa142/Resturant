@@ -136,8 +136,8 @@ body {
 /* start landing */
 .landing {
  overflow: hidden;
-    margin-bottom: 100px;
-    margin-top: 40px;
+    margin-bottom: 150px;
+    margin-top: 50px;
 }
 
 .content-1 {
@@ -145,9 +145,7 @@ body {
     align-items: center;
 }
 
-.welcome{
-    color: var(--yellow);
-}
+
 
 .content-1 h1 {
     font-size: 4.5em;
@@ -170,7 +168,6 @@ body {
     animation: rotatePan 2s ease-in-out forwards;
     rotate: 350deg;
     transition: .3s;
-    /* width: 100%; */
 }
 
 .content-1 .image img:nth-of-type(2) {
@@ -187,10 +184,14 @@ body {
 }
 
 @media (max-width:980px) {
-    .content-1 {
-        text-align: center;
-        margin: 40px 0;
+    .landing {
+        margin: 150px 0;
     }
+    .content-1 {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
    .image {
     visibility: hidden;
    }
@@ -232,7 +233,7 @@ body {
 
 /* outdoor */
 .space {
-    background-image: url(restaurants-terrace-with-black-green-awnings.jpg);
+    background-image: url(resources/restaurants-terrace-with-black-green-awnings.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
