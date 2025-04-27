@@ -1,5 +1,4 @@
 
-
 // cloud in outdoor
 document.addEventListener("scroll", function () {
     let clouds = document.querySelector(".clouds");
@@ -9,9 +8,6 @@ document.addEventListener("scroll", function () {
     document.querySelectorAll(".cloud").forEach(cloud => {
         if (cloudsPosition < screenHeight - 100 && cloudsPosition > 0) {
             cloud.classList.add("animate");
-        } else if (cloudsPosition < screenHeight && cloudsPosition + cloudsHeight > 0) {
-
-            cloud.classList.remove("animate");
         }
     });
 });

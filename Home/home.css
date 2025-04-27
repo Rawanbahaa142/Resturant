@@ -236,7 +236,6 @@ body {
     to {
         transform: translateY(-10px);
         opacity: 0.5;
-        overflow: hidden;
     }
 
 }
@@ -347,7 +346,6 @@ body {
     margin: 0;
     padding: 0;
     align-items: center;
-    padding-right: 50px;
 }
 
 .story .story_image {
@@ -358,13 +356,12 @@ body {
     border-right: #c7ae38 5px solid;
 }
 
-.story .story_image img:hover {
-    transform: scale(1.05);
-}
-
 .story .story_image img {
     width: 100%;
     transition: .3s;
+}
+.story .story_image img:hover {
+    transform: scale(1.05);
 }
 
 .story .story_text h3 {
@@ -381,7 +378,8 @@ body {
 }
 
 .story .story_text {
-    padding: 0 45px;
+    padding-left: 0;
+   padding-right: 45px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -394,7 +392,7 @@ body {
 
 @media (max-width: 900px) {
     .story .story_content {
-        padding-right: 0px;
+        padding-right: 0;
         text-align: center;
     }
 
@@ -436,7 +434,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: gold;
+    background-color: var(--yellow);
     transition: width 0.5s ease-in-out;
 }
 
@@ -475,29 +473,32 @@ body {
     padding: 10px;
 }
 
-.aboutUs .col {
+.aboutUs .col-md-4 {
     display: flex;
     align-items: center;
     gap: 20px;
     justify-content: center;
 }
 
-.aboutUs .col p {
+.aboutUs .col-md-4 p {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--yellow);
     font-size: 15px;
 
 }
 
-.aboutUs .col p,
-.aboutUs .col h3 {
+.aboutUs .col-md-4 p,
+.aboutUs .col-md-4 h3 {
     margin: 0;
 }
 
 .aboutUs .details:hover {
     text-shadow: 0 0 25px var(--yellow);
     border-color: var(--yellow);
-    box-shadow: inset 0 0 25px 4px var(--yellow);
+}
+.aboutUs .details:hover i {
+
+  color: var(--yellow);
 }
 
 
@@ -508,7 +509,7 @@ body {
         text-align: center;
     }
 
-    .aboutUs .col {
+    .aboutUs .col-md-4 {
         margin-bottom: 10px;
     }
 
