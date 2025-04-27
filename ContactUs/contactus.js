@@ -9,7 +9,7 @@ document.getElementById('save').onclick = (e) => {
         alert("Please fill in all fields.");
         return;
     }
-
+   
     let existdata = localStorage.getItem('user');
     let data = existdata ? JSON.parse(existdata) : [];
 

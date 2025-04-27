@@ -1,27 +1,34 @@
 let all = [];
 
-async function getsalt() {
-    const res = await fetch('https://dummyjson.com/recipes');
-    const data = await res.json();
-    console.log(data.recipes);
+function getsalt() {
+    fetch('https://dummyjson.com/recipes')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.recipes);
 
-    // Add random price and description
-    all = data.recipes.map(item => ({
-        ...item,
-        price: (Math.random() * (30 - 5) + 5).toFixed(2),  // Random price between $5 and $30
-        description: generateRandomDescription()  // Generate random description
-    }));
+            all = data.recipes.map(item => ({
+                ...item,
+                price: (Math.random() * (30 - 5) + 5).toFixed(2),  
+                description: generateDescription()
+            }));
 
-    show(all);
+            show(all);
+        })
+        .catch(error => console.error('Error fetching data:', error));
 }
 
-// Function to generate random descriptions
-function generateRandomDescription() {
+function generateDescription() {
     const descriptions = [
-        "A simple yet flavorful recipe for quick meals."
+      "A refreshing drink to brighten your day.",
+      "A classic cocktail with a twist of flavor.",
+      "A perfect blend of sweetness and tang.",
+      "A drink to enjoy with friends and laughter.",
+      "A vibrant and colorful cocktail to impress."
     ];
-    return descriptions[Math.floor(Math.random() * descriptions.length)];
-}
+    for (let i=0;i<descriptions.length;i++){
+    return descriptions[i];
+    }
+  }
 
 function show(list) {
     const box = document.getElementById("recipes");
@@ -43,6 +50,7 @@ document.getElementById("search").oninput = function (e) {
 };
 
 getsalt();
+
 // Navbar Scroll Effect
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");

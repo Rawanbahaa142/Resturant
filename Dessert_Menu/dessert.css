@@ -270,6 +270,7 @@ body {
   color: var(--black);
 }
 /*Start Footer*/
+
 .new-footer {
   background-color: var(--grey);
   color: var(--white);
@@ -284,6 +285,18 @@ body {
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 10px;
+}
+
+.footer-column .social-icons i {
+  color: #c7af38b9;
+  border: #1c1c1c solid;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.footer-column .social-icons i:hover {
+  color: #c7ae38;
+  background-color: #1c1c1c;
 }
 
 .new-footer h5::after {
@@ -306,6 +319,7 @@ body {
 .footer-content p i {
   margin-right: 8px;
   color: var(--yellow);
+  font-size: 15px;
 }
 
 .footer-links {
@@ -336,7 +350,3 @@ body {
 }
 
 /*End Footer*/
-
-
-
-
