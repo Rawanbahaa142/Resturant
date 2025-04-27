@@ -1,19 +1,21 @@
 let all = [];
 
-async function getDrinks() {
-  const res = await fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail');
-  const data = await res.json();
-  
-  all = data.drinks.map(item => ({
-    ...item,
-    price: (Math.random() * (30 - 5) + 5).toFixed(2),  
-    description: generateRandomDescription()  
-  }));
+function getDrinks() {
+  fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail')
+    .then(res => res.json())
+    .then(data => {
+      all = data.drinks.map(item => ({
+        ...item,
+        price: (Math.random() * (30 - 5) + 5).toFixed(2),
+        description: generateDescription()
+      }));
 
-  show(all);
+      show(all);
+    })
+    .catch(error => console.error('Error fetching data:', error));
 }
 
-function generateRandomDescription() {
+function generateDescription() {
   const descriptions = [
     "A refreshing drink to brighten your day.",
     "A classic cocktail with a twist of flavor.",
@@ -21,7 +23,9 @@ function generateRandomDescription() {
     "A drink to enjoy with friends and laughter.",
     "A vibrant and colorful cocktail to impress."
   ];
-  return descriptions[Math.floor(Math.random() * descriptions.length)];
+  for (let i=0;i<descriptions.length;i++){
+  return descriptions[i];
+  }
 }
 
 function show(list) {
@@ -44,3 +48,12 @@ document.getElementById("search").oninput = function(e) {
 };
 
 getDrinks();
+// Navbar Scroll Effect
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+  } else {
+      navbar.classList.remove("scrolled");
+  }
+});

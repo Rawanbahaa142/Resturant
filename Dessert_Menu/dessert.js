@@ -3,38 +3,45 @@
 
 let all = [];
 
-async function getDesserts() {
-  const res = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
-  const data = await res.json();
-  all = data.meals;
-  show(all);
+function getDesserts() {
+  fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert')
+    .then(res => res.json())
+    .then(data => {
+      all = data.meals;
+      show(all);
 
-    all = data.meals.map(item => ({
+      all = data.meals.map(item => ({
         ...item,
         price: (Math.random() * (30 - 5) + 5).toFixed(2),  
-        description: generateRandomDescription()  
-    }));
-  }
+        description: generateDescription()
+      }));
 
-    show(all);
-
-
-function generateRandomDescription() {
-    const descriptions = [
-        "A simple yet flavorful recipe for quick meals."
-    ];
-    return descriptions[Math.floor(Math.random() * descriptions.length)];
+      show(all);
+    })
+    .catch(error => console.error('Error fetching data:', error));
 }
 
+function generateDescription() {
+  const descriptions = [
+    "A refreshing drink to brighten your day.",
+    "A classic cocktail with a twist of flavor.",
+    "A perfect blend of sweetness and tang.",
+    "A drink to enjoy with friends and laughter.",
+    "A vibrant and colorful cocktail to impress."
+  ];
+  for (let i=0;i<descriptions.length;i++){
+  return descriptions[i];
+  }
+}
 
 function show(list) {
   const box = document.getElementById("recipes");
-  box.innerHTML = list .map(item => `
+  box.innerHTML = list.map(item => `
     <div class="recipe">
       <img src="${item.strMealThumb}">
-      <p>${item.strMeal}</p>\
-            <p>${item.description}</p>
-    <p><strong>Price:</strong> $${item.price}</p>
+      <p>${item.strMeal}</p>
+      <p>${item.description}</p>
+      <p><strong>Price:</strong> $${item.price}</p>
     </div>
   `).join('');
 }
@@ -46,6 +53,7 @@ document.getElementById("search").oninput = function(e) {
 };
 
 getDesserts();
+
 
 // Navbar Scroll Effect
 window.addEventListener("scroll", function () {
