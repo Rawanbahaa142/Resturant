@@ -69,7 +69,9 @@ body {
     color: var(--white) !important;
     position: relative;
 }
-
+.dropdown-menu {
+    position:fixed;
+}
 .navbar-nav .nav-link {
     color: var(--white) !important;
     font-size: 18px;
