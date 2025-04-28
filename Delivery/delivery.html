@@ -73,18 +73,33 @@
 
                 </div>
 
+                <!-- Comming -->
+                <input list="options"  placeholder="why will come?" class="Reservation_Options" required>
+                <datalist id="options">
+                    <option value="just for dinner">
+                    <option value="Wedding Meals">
+                    <option value="Birthday Party">
+                    <option value="Business Meeting">
+                    <option value="Family Gathering">
+                    <option value="Friends Gathering">
+                    <option value="Special Event">
+                    <option value="Anniversary Celebration">
+                    <option value="Graduation Celebration">
+                </datalist>
+                
+
                 <!-- Date -->
                 <input type="text" placeholder="Date" class="Reservation_Date" required onfocus="(this.type='date')"
-                    onblur="if(this.value===''){ this.type='text' }"><br>
-
-                <input type="submit" value="Book a Table" class="Reservation_submit">
+                onblur="if(this.value===''){ this.type='text' }"><br>
+            <input type="submit" value="Book a Table" class="Reservation_submit">
+            <!-- <h5 id="hidden_text" style="display: none;">data has been sent successfully</h5> -->
 
             </form>
             <script src="delivery.js"></script>
         </div>
     </div>
    <!-- Start Footer -->
-   <footer class="new-footer">
+   <footer class="new-footer">  
     <div class="container">
         <div class="row">
 
