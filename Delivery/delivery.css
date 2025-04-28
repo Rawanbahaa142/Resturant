@@ -150,42 +150,29 @@ background-image: url('night\ resturant.png');
     min-height: 100vh;
     font-family: Arial, sans-serif;
     padding: 20px;
-}
-h1 {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
-}
-.Reservation_text1, .Reservation_text2 {
-    text-align: center;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    /* font-weight: 100px; */
-    font-style:italic;
-    font-size: 35px; 
-    color: rgb(255, 255, 255);    
-
-  }
-  
-.Reservation {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-
-.Reservation_container {
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
 }
 
 .Reservation_text1, .Reservation_text2 {
     text-align: center;
     margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style:italic;
+    font-size: 35px; 
+    color: rgb(255, 255, 255);    
+
+  }
+
+.Reservation_container {
+    background-color: rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .Reservation_form {
@@ -194,38 +181,21 @@ h1 {
     gap: 15px;
 }
 
-input[type="text"],input[type="number"],input[type="date"], input[type="submit"],input[type="time"] ,input[list="options"] {
+input[type="text"],input[type="number"],input[type="date"],input[type="time"] ,input[list="options"] {
     padding: 12px;
-    /* margin: 5px; */
     border-radius: 8px;
-    border: 1px solid #d9d9d9;
     font-size: 16px;
     width: 100%;
-}
-
-/* input[type="text"] {
-        background-color: rgba(0, 0, 0, 0.913); */
-        /* background-color: rgb(0, 0, 0); */
-        /* border: 2px solid rgb(255, 255, 255);
-        border-width: 3px; 
-
- }*/
-input[type="text"]::placeholder,input[type="number"]::placeholder,input[type="date"]::placeholder ,input[type="time"]::placeholder,input[list="options"]::placeholder {
-    font-style:italic;
-    color: rgb(121, 117, 117);
-    /* opacity: 0.2; Adjusts the opacity of the placeholder text
-    background-color: rgb(0, 0, 0); */
- } 
-
-input[type="text"] ,input[type="number"],input[type="date"] ,input[type="time"], input[list="options"] {
-    
     background-color: rgba(0, 0, 0, 0.913);
     color: white;
-    border: none;
-    /* border: 2px solid rgb(91, 89, 89); */
     border: 1px solid #c7af38cd;
     cursor: pointer;
 }
+
+input[type="time"]{
+  margin-bottom: 10px; 
+}
+
 input[type="submit"] {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -234,9 +204,20 @@ input[type="submit"] {
     background-color: rgba(0, 0, 0, 0.913);
     color: white;
     border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+input[type="text"]::placeholder,input[type="number"]::placeholder,
+input[type="date"]::placeholder ,input[type="time"]::placeholder,
+input[list="options"]::placeholder {
+
+    font-style:italic;
+    color: rgb(121, 117, 117);
+ } 
 
 .Reservation_Person_Timing {
     display: flex;
@@ -248,9 +229,7 @@ input[type="submit"] {
     flex: 1;
 }
 
-
 input[type="submit"]:hover {
-    /* background-color: #ebce58ac; */
     background-color: #c7af38c8;
 }
 
